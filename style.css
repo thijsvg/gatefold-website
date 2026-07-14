@@ -1,0 +1,270 @@
+/* ==========================================================
+   Gatefold — statische site
+   Kleuren en typografie gebaseerd op het originele ontwerp
+   ========================================================== */
+
+:root {
+  --cream: #e9e3d3;      /* lichte achtergrond */
+  --navy: #14384f;       /* donkerblauwe secties */
+  --ink: #1a1a1a;        /* tekst op licht */
+  --line: rgba(233, 227, 211, 0.5); /* lijntjes in accordeon */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; }
+
+/* ---------- Header ---------- */
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 6vw;
+  background: var(--cream);
+}
+
+.wordmark img { height: 22px; width: auto; }
+
+.site-header nav a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  margin-left: 28px;
+}
+
+.site-header nav a:hover,
+.site-header nav a.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ---------- Knoppen ---------- */
+
+.btn {
+  display: inline-block;
+  padding: 14px 40px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease;
+}
+
+.btn:hover { opacity: 0.85; }
+
+.btn-dark { background: var(--navy); color: var(--cream); }
+.btn-light { background: var(--cream); color: var(--navy); }
+
+/* ---------- Hero ---------- */
+
+.hero { background: var(--cream); padding: 6vw 6vw 8vw; }
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 6vw;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.hero p { max-width: 44ch; margin-bottom: 32px; font-size: 0.95rem; }
+
+.hero-image img { max-width: 420px; margin: 0 auto; }
+
+/* ---------- Donkere secties ---------- */
+
+.dark { background: var(--navy); color: var(--cream); }
+
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 90px 6vw;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 6vw;
+  align-items: start;
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 500;
+}
+
+/* ---------- Accordeon (services) ---------- */
+
+.accordion details { border-bottom: 1px solid var(--line); }
+.accordion details:first-child { border-top: 1px solid var(--line); }
+
+.accordion summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 4px;
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+.accordion summary::-webkit-details-marker { display: none; }
+
+/* plus/min-teken */
+.accordion summary::after {
+  content: "+";
+  font-size: 1.6rem;
+  font-weight: 400;
+  flex-shrink: 0;
+}
+
+.accordion details[open] summary::after { content: "–"; }
+
+.accordion details p {
+  padding: 0 4px 24px;
+  font-size: 0.9rem;
+  max-width: 55ch;
+  opacity: 0.9;
+}
+
+/* ---------- Hoe het werkt ---------- */
+
+.how-it-works { align-items: center; }
+
+.how-image img { max-width: 420px; }
+
+.how-text h2 {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.how-text p { max-width: 48ch; margin-bottom: 32px; font-size: 0.95rem; }
+
+/* ---------- Contact ---------- */
+
+.contact p { max-width: 40ch; margin-top: 16px; font-size: 0.95rem; }
+
+.contact-details { font-size: 1.05rem; }
+.contact-details .contact-name { font-weight: 600; margin-bottom: 8px; }
+.contact-details a { text-underline-offset: 4px; }
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background: var(--cream);
+  color: var(--ink);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6vw;
+  padding: 70px 6vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo { max-width: 130px; margin-bottom: 18px; }
+
+.footer-left p { font-size: 0.85rem; margin-bottom: 6px; }
+.footer-left .credit { margin-bottom: 18px; }
+
+.footer-right { justify-self: end; }
+.footer-right h3 { font-size: 1.6rem; font-weight: 500; margin-bottom: 16px; }
+.footer-right p { font-size: 0.95rem; margin-bottom: 4px; }
+
+.socials { display: flex; gap: 16px; margin-top: 18px; }
+.socials a { color: var(--ink); }
+.socials a:hover { opacity: 0.7; }
+
+/* ---------- Over ons ---------- */
+
+.about { background: var(--cream); }
+
+.about-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6vw;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: start;
+}
+
+.about-text h1 {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+
+.about-text p { max-width: 52ch; margin-bottom: 20px; font-size: 1rem; }
+
+.about-text .btn { margin-top: 16px; }
+
+/* ---------- Voorwaarden-pagina's ---------- */
+
+.legal {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 6vw 90px;
+}
+
+.legal h1 {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.legal h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 36px 0 10px;
+}
+
+.legal p { font-size: 0.95rem; margin-bottom: 14px; }
+
+.legal .legal-meta {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin: 24px 0;
+}
+
+/* ---------- Mobiel ---------- */
+
+@media (max-width: 800px) {
+  .hero-inner,
+  .two-col,
+  .about-inner,
+  .site-footer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-image { order: -1; }
+  .hero-image img { max-width: 260px; }
+
+  .section-inner { padding: 60px 6vw; }
+
+  .accordion summary { font-size: 1.1rem; }
+
+  .footer-right { justify-self: start; }
+}
