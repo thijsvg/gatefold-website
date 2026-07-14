@@ -168,10 +168,6 @@ a { color: inherit; }
 
 .contact p { max-width: 40ch; margin-top: 16px; font-size: 0.95rem; }
 
-.contact-details { font-size: 1.05rem; }
-.contact-details .contact-name { font-weight: 600; margin-bottom: 8px; }
-.contact-details a { text-underline-offset: 4px; }
-
 /* ---------- Footer ---------- */
 
 .site-footer {

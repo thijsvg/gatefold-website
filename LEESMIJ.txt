@@ -1,0 +1,24 @@
+GATEFOLD — statische website
+============================
+
+Zet de hele map "gatefold" (of de inhoud ervan) op je hosting en de site is live.
+
+AFBEELDINGEN (staan al in de map "img")
+
+  img/logo.webp         → GATEFOLD-woordmerk linksboven in de header
+  img/hero.webp         → illustratie (man met plaat en hond) op de homepage
+  img/thijs.webp        → foto bij "Hoe het werkt" (portret voor het raam)
+  img/strand.webp       → foto op de Over ons-pagina (strand)
+  img/logo-footer.webp  → logo-illustratie met tekst in de footer
+
+LET OP
+  - algemene-voorwaarden.html en terms-conditions.html zijn een concept,
+    geschreven zonder juridisch advies. Laat ze checken door een jurist
+    voordat je ze als bindend gebruikt.
+
+OVERIG
+  - Contactformulier is weggelaten; in plaats daarvan staan e-mail en telefoon als links.
+  - Beide "Meer info"-knoppen linken naar over-ons.html; de Contact-knop op
+    Over ons linkt naar de contactsectie op de homepage.
+  - Het lettertype (Hanken Grotesk) wordt via Google Fonts geladen.
+  - Geen JavaScript nodig; de uitklapbare services werken met puur HTML/CSS.
